@@ -22,17 +22,45 @@
           </ol>
         </div>
       </header>
-        <!-- <script>
-          // Add active class to navbar items on click
-let navItems = document.querySelectorAll('nav button');
-navItems.forEach(item => {
-  item.addEventListener('click', () => {
-    navItems.forEach(item => item.classList.remove('active'));
-    item.classList.add('active');
-  });
-});
+<!-- -------------------------------------------------- -->
+      <section aria-label="College Images">
+        <div class="carousel" data-carousel>
+          <button class="carousel-button prev" data-carousel-button="prev">&#8656</button>
+          <button class="carousel-button next" data-carousel-button="next">&#8658</button>
+        <ul data-slides>
+          <li class="slide" data-active>
+            <img  src="/images/01.jpg" alt="Something went wrong...">
+          </li>
+          <li class="slide">
+            <img src="/images/02.jpg" alt="Something went wrong...">
+          </li>
+          <li class="slide">
+            <img src="/images/03.jpg" alt="Something went wrong...">
+          </li>
+          <li class="slide">
+            <img src="/images/04.jpg" alt="Something went wrong...">
+          </li>
+        </ul>
+      </div>
+      </section>
+      <script>
+        const buttons=document.querySelectorAll("[data-carousel-button]")
+        buttons.forEach(button => {
+          button.addEventListener("click",() => {
+          const offset= button.dataset.carouselButton === "next" ? 1:-1
+          const slides= button
+            .closest("[data-carousel]")
+            .querySelector("[data-slides]")
 
+          const activeSlide = slides.querySelector("[data-active]")
+          let newIndex = [...slides.children].indexOf(activeSlide) + offset
+          if(newIndex < 0) newIndex = slides.children.length - 1
+          if(newIndex >= slides.children.length) newIndex = 0
 
-    </script> -->
+          slides.children[newIndex].dataset.active = true
+          delete activeSlide.dataset.active
+          })
+        })
+      </script>
     </body>
     </html>
