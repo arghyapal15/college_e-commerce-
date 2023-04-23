@@ -24,7 +24,7 @@
           </ol>
         </div>
       </header>
-<!-- -------------------------------------------------- -->
+<!-- ----------------------carousel---------------------------- -->
       <section aria-label="College Images">
         <div class="carousel" data-carousel>
           <button class="carousel-button prev" data-carousel-button="prev">&#8656</button>
@@ -48,6 +48,12 @@
       <!-- -------------Buttons for different streams----------------- -->
       <hr>
       <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+
+
+
+
+      
+      <!-- ----------------------------buttons--------------------------------------------- -->
 <div class="button-section">
       <div class="multi-button">
         <button class="btn"><i class="fas"></i> ELECTRICAL</button>
@@ -63,6 +69,81 @@
 <hr>
 <div class="feature-college"><button class="btn btn-edit"><i class="fas"></i>Featured Colleges</button></div>
 
+<!-- ---------------------------------------------------------------------------------------- -->
+
+
+
+<!-- -------------------------------top college cards------------------------------------------------- -->
+<div id="container" class="container">
+    <div class="card">
+    <div class="content">
+    <h2>01</h2>
+    <h3>Card One</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur
+    adipisicing elit, sed do eiusmod tempor incididunt
+    ut labore et dolore magna aliqua.</p>
+    <a href="#">Read More</a>
+    </div>
+    </div>
+    <div class="card">
+    <div class="content">
+    <h2>02</h2>
+    <h3>Card two</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur
+    adipisicing elit, sed do eiusmod tempor incididunt
+    ut labore et dolore magna aliqua.</p>
+    <a href="#">Read More</a>
+    </div>
+    </div>
+    <div class="card">
+    <div class="content">
+    <h2>03</h2>
+    <h3>Card three</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur
+    adipisicing elit, sed do eiusmod tempor incididunt
+    ut labore et dolore magna aliqua.</p>
+    <a href="#">Read More</a>
+    </div>
+    </div>
+    <div class="card">
+        <div class="content">
+        <h2>04</h2>
+        <h3>Card four</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit, sed do eiusmod tempor incididunt
+        ut labore et dolore magna aliqua.</p>
+        <a href="#">Read More</a>
+        </div>
+        </div>
+    <div class="card">
+        <div class="content">
+            <h2>05</h2>
+            <h3>Card five</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit, sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua.</p>
+            <a href="#">Read More</a>
+        </div>
+    </div>
+    </div>
+    <!-- ----------------------------------------------------------- -->
+
+
+
+    <!-- ------------------cards script------------------------------ -->
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script>
+    VanillaTilt.init(document.querySelectorAll(".card"), {
+        max: 25,
+        speed: 400,
+        glare: true,
+        "max-glare":1,
+    });
+    </script>  
+    <!-- --------------------------------------------------------- -->
+
+
+    <!-- -----------------------carousel script------------------------------------ -->
       <script>
         const buttons=document.querySelectorAll("[data-carousel-button]")
         buttons.forEach(button => {
@@ -82,5 +163,6 @@
           })
         })
       </script>
+      <!-- --------------------------------------------------------------------- -->
     </body>
     </html>
