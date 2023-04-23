@@ -325,7 +325,56 @@ section .nav1 {
 }
 .body .right {
   width: 80%;
-  background-color: #f7b7b7;
+  display: flex;
+  flex-direction: column;
+}
+.body .right .navbar ul {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  float: right;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.body .right .navbar ul li a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #000000;
+  font-weight: 800;
+  border: 2px solid black;
+  padding: 0.7rem;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.body .right .navbar ul li a:hover {
+  background-color: #ff3434;
+  color: #fff;
+  font-size: 1.1rem;
+}
+.body .right .navbar ul li:nth-child(1) a, .body .right .navbar ul :nth-child(2) a {
+  border-radius: 5% 50%;
+}
+.body .right .navbar .sort-by {
+  margin-bottom: 20px;
+}
+.body .right .navbar .sort-by label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+.body .right .college_card {
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+}
+.body .right .college_card .product-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.body .right .college_card .product-list li {
+  margin-bottom: 10px;
 }
 
 @media screen and (width <= 900px) {
@@ -334,4 +383,70 @@ section .nav1 {
     align-items: center;
     padding: 0.2rem;
   }
+}
+.college-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.college-card {
+  flex-basis: calc(33.33% - 20px);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e2e2e2;
+}
+
+.college-logo {
+  width: 150px;
+  height: 150px;
+  margin-right: 20px;
+}
+
+.college-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.college-details {
+  flex: 1;
+  text-align: left;
+}
+
+.college-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.college-location,
+.college-description {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.college-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0077ff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.college-link:hover {
+  background-color: #005;
 }/*# sourceMappingURL=index.css.map */
