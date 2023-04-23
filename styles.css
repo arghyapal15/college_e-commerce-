@@ -1,7 +1,6 @@
 *{
 	margin: 0;
 	padding: 0;
-	/* box-sizing: border-box; */
 	font-family: 'Poppins',sans-serif;
 }
 header{
@@ -24,20 +23,24 @@ header{
 	list-style: none;
 }
 
-
+hr{
+	border-width: 2px;
+	border-color: black;
+}
   .logo {
 	font-size: 24px;
 	font-weight: bold;
+	padding: 0;
   }
 .login{
 	/* padding-left: 5px;
 	padding-right: 5px; */
-	float: left;
-	left: 20px;
+	float: right;
+	left: 21rem;
 }
 .get-cv {
 	float: right;
-	left: 46rem;
+	left: 40rem;
 	border: none;
 	cursor: pointer;
 	border-radius: 10px;
@@ -45,8 +48,8 @@ header{
   }
 .wishlist{
 
-	float: left;
-	left: 30px;
+	float: right;
+	left: 22rem;
 }
 
 
@@ -54,6 +57,7 @@ header{
 .search{
 	position: relative;
 	left: 25rem;
+	bottom: 8px;
 }
    .nav ol li a{
 	   text-decoration: none;
@@ -132,7 +136,9 @@ header{
 	  margin: 0;
 	  padding: 0;
 	  list-style: none;
+	  
   }
+
 
   .slide{
 	  position: absolute;
@@ -150,7 +156,9 @@ header{
 	  object-fit: cover;
 	  object-position: center;
 	  border-bottom: 10px;
+	  
   }
+
   .slide[data-active]{
 	  opacity: 1;
 	  z-index: 1;
@@ -188,3 +196,68 @@ header{
   .carousel-button.next{
 	  right:1rem;
   }
+  
+ 
+  /* MULTI BUTTON FOR STREAMS */
+
+
+
+
+  .muti-button {
+	margin: 0;
+	display: grid;
+	place-items: center;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+	background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+  }
+  .button-section{
+	margin: 4rem 20rem 5rem 20rem;
+    background: rgba(255, 255, 255, 0.8);
+  }
+  .btn{
+	font-size: 19px;
+	padding: .5em 1em;
+	background: #fff;
+	color: #4A5568;
+	border: 0px solid #A0AEC0;
+	margin: .1em;
+	transition: background .2s ease, color .2s ease, box-shadow .2s ease, transform .2s ease;
+	box-shadow: 0 0 0 #BEE3F8;
+	transform: translateY(0);
+  }
+  .btn:first-of-type{
+	border-radius: .5em 0 0 .5em;
+  }
+  .btn:last-of-type{
+	border-radius: 0 .5em .5em 0;
+  }
+  .btn i{
+	color: #A0AEC0;
+	margin-right: .3em;
+	transition: all .2s ease-out;
+  }
+  .multi-button:hover .btn,.btn-edit{
+	color: #A0AEC0;
+  }
+  
+  .multi-button:hover .btn:hover,.btn-edit{
+	background: #D53F8C;
+	color: #fff;
+	box-shadow: 0 0 0.8em 0 rgba(213, 63, 140, .8);
+	transform: translateY(-.2em);
+  }
+  .multi-button:hover .btn i,.btn-edit{
+	color: #CBD5E0;
+  }
+  .multi-button:hover .btn:hover i,.btn-edit{
+	color: #FED7E2;
+	transform: rotate(-10deg);
+  }
+  .feature-college{
+	text-align: center;
+	text-align: center;
+    margin: 4rem 1rem 4rem 1rem;
+  }
+
+  
