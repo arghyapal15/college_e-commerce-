@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
     <title>My E-commerce Website</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
@@ -18,7 +20,7 @@
                 <input type="text" placeholder="Search">
                 <button class="submit" type="submit">Go</button>
             </div></li>
-            <li><a href="./arghya's part/index.html" class="get-cv sfx">Get Your CV</a></li>
+            <li><a href="#" class="get-cv sfx">Get Your CV</a></li>
           </ol>
         </div>
       </header>
@@ -29,20 +31,38 @@
           <button class="carousel-button next" data-carousel-button="next">&#8658</button>
         <ul data-slides>
           <li class="slide" data-active>
-            <img  src="/images/01.jpg" alt="Something went wrong...">
+            <img  src="https://source.unsplash.com/featured/1000x1000" alt="Something went wrong...">
           </li>
           <li class="slide">
-            <img src="/images/02.jpg" alt="Something went wrong...">
+            <img src="https://source.unsplash.com/featured/1000x1001" alt="Something went wrong...">
           </li>
           <li class="slide">
-            <img src="/images/03.jpg" alt="Something went wrong...">
+            <img src="https://source.unsplash.com/featured/1010x1000" alt="Something went wrong...">
           </li>
           <li class="slide">
-            <img src="/images/04.jpg" alt="Something went wrong...">
+            <img src="https://source.unsplash.com/featured/19201200x" alt="Something went wrong...">
           </li>
         </ul>
       </div>
       </section>
+      <!-- -------------Buttons for different streams----------------- -->
+      <hr>
+      <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+<div class="button-section">
+      <div class="multi-button">
+        <button class="btn"><i class="fas"></i> ELECTRICAL</button>
+        <button class="btn"><i class="fas"></i> CIVIL</button>
+        <button class="btn"><i class="fas"></i> MECHANICAL</button>
+        <button class="btn"><i class="fas"></i> ELECTRONICS</button>
+        <button class="btn"><i class="fas"></i> COMPUTER SCIENCE</button>
+        <button class="btn"><i class="fas"></i> BIOTECHNOLOGY</button>
+        <button class="btn"><i class="fas"></i> CHEMICAL</button>
+        <button class="btn"><i class="fas"></i> IT</button>
+      </div>
+</div>
+<hr>
+<div class="feature-college"><button class="btn btn-edit"><i class="fas"></i>Featured Colleges</button></div>
+
       <script>
         const buttons=document.querySelectorAll("[data-carousel-button]")
         buttons.forEach(button => {
