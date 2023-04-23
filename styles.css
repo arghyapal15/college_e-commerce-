@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css? family=Poppins: 200, 300, 400, 500, 600, 700, 800, 900& display=swap');
 *{
-	margin: 0;
-	padding: 0;
-	font-family: 'Poppins',sans-serif;
+margin: 0;
+padding: 0;
+/* box-sizing: border-box; */
+font-family: 'Poppins', sans-serif;
+}
+body{
+
+    background: #161623;
 }
 header{
 	width: 100%;
@@ -23,24 +29,20 @@ header{
 	list-style: none;
 }
 
-hr{
-	border-width: 2px;
-	border-color: black;
-}
+
   .logo {
 	font-size: 24px;
 	font-weight: bold;
-	padding: 0;
   }
 .login{
 	/* padding-left: 5px;
 	padding-right: 5px; */
-	float: right;
-	left: 21rem;
+	float: left;
+	left: 20px;
 }
 .get-cv {
 	float: right;
-	left: 40rem;
+	left: 46rem;
 	border: none;
 	cursor: pointer;
 	border-radius: 10px;
@@ -48,8 +50,8 @@ hr{
   }
 .wishlist{
 
-	float: right;
-	left: 22rem;
+	float: left;
+	left: 30px;
 }
 
 
@@ -57,7 +59,7 @@ hr{
 .search{
 	position: relative;
 	left: 25rem;
-	bottom: 8px;
+    bottom: 5px;
 }
    .nav ol li a{
 	   text-decoration: none;
@@ -124,7 +126,7 @@ hr{
 	  background-color: #555;
 	}
   }
-  /* images carousel */
+  /* ----------------------------images carousel -------------------------------*/
 
 
   .carousel{
@@ -136,9 +138,7 @@ hr{
 	  margin: 0;
 	  padding: 0;
 	  list-style: none;
-	  
   }
-
 
   .slide{
 	  position: absolute;
@@ -156,9 +156,7 @@ hr{
 	  object-fit: cover;
 	  object-position: center;
 	  border-bottom: 10px;
-	  
   }
-
   .slide[data-active]{
 	  opacity: 1;
 	  z-index: 1;
@@ -196,24 +194,26 @@ hr{
   .carousel-button.next{
 	  right:1rem;
   }
-  
- 
-  /* MULTI BUTTON FOR STREAMS */
+
+/* MULTI BUTTON FOR STREAMS */
 
 
 
 
-  .muti-button {
+.muti-button {
 	margin: 0;
-	display: grid;
+	display: flexbox;
 	place-items: center;
 	font-family: 'Poppins', sans-serif;
 	font-weight: 600;
 	background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
   }
   .button-section{
-	margin: 4rem 20rem 5rem 20rem;
-    background: rgba(255, 255, 255, 0.8);
+	position: absolute;
+    bottom: 2rem;
+    z-index: 2;
+    left: 5rem;
+    
   }
   .btn{
 	font-size: 19px;
@@ -260,4 +260,94 @@ hr{
     margin: 4rem 1rem 4rem 1rem;
   }
 
-  
+
+
+/* -------------------cards----------------------------- */
+
+#container
+{
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+background: #161623;
+padding: 0px 115px 0px 122px;
+}
+#container::before
+{
+content: '';
+position: absolute;
+top: 0;
+Left: 0;
+width: 100%;
+height: 100%;
+background: linear-gradient(#f00,#f0f);
+clip-path: circle(30% at right 70%);
+}
+
+.container
+{
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+z-index: 1;
+}
+.container .card
+{
+position: relative;
+width: 280px;
+height: 400px;
+margin: 30px;
+box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+border-radius: 15px;
+background:rgba(255, 255, 255, 0.1);
+overflow: hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+border-top: 1px solid rgba(255, 255, 255, 0.5);
+border-left: 1px solid rgba(255, 255, 255, 0.5);
+backdrop-filter: blur(5px);
+}
+.container .card .content
+{
+padding: 20px;
+text-align: center;
+transition: 0.5s;
+}
+.container .card .content h2
+{
+position: absolute;
+top: -20px;
+right: 30px;
+font-size: 8em;
+color: rgba(255, 255, 255, 0.05);
+pointer-events: none;
+}
+.container .card .content h3
+{
+font-size: 1.8em;
+color: #fff;
+z-index: 1;
+}
+.container .card .content p
+{
+font-size: 1em;
+color: #fff;
+font-weight: 300;
+}
+.container .card .content a
+{
+position: relative;
+display: inline-block;
+padding: 8px 20px;
+margin-top: 15px;
+background:#fff;
+color: #000;
+border-radius: 20px;
+text-decoration: none;
+font-weight: 500;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5)
+}
