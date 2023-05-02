@@ -430,21 +430,122 @@ section{
                 align-items: center;
                 z-index: 1;
                 display: none;
+                background: #000;
+                opacity: 0.9;
+
+                
 
                 .popup-form {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
                     background-color: white;
                     padding: 20px;
                     border-radius: 5px;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-evenly;
-                    align-items: center;
-                    width: 50%;
+                    // align-items: center;
+                    // text-align: center;
+                    width: 40%;
+                    height: fit-content;
+                    box-sizing: border-box;
+                    border-radius: 5px;
+                    box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8),
+                                6px 6px 10px rgba(0, 0, 0, 0.2);
+
+                    h2{
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        font-size: 23px;
+                        margin-bottom: 25px;
+                        text-align: center;
+                    }            
 
                     form{
                         display: flex;
-                        flex-wrap: wrap;
-                        gap: 6px;
+                        width: 100%;
+                        height: 100%;
+                        // flex-wrap: wrap;
+                        flex-direction: column;
+                        width: 100%;
+                        // gap: 6px;
+                        // align-items: center;
+                        text-align: center;
+
+                        div{
+                            margin-bottom: 15px;
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+
+                            label{
+                                width: 25%;
+                                font-size: 1.2rem;
+                                font-weight: 700;
+                            }
+
+                            input{
+                                display: block;
+                                height: 43px;
+                                width: 75%;
+                                background-color: rgba(255,255,255,0.07);
+                                border-radius: 3px;
+                                border: none;
+                                box-shadow: inset 2px 2px 5px #babecc,
+                                        inset -5px -5px 10px #ffffff73;
+                                margin-top: 8px;
+                                font-size: 14px;
+                                font-weight: 300;
+                                padding: 12px;
+                            }
+
+                            input[type="text"]{
+                                width: 75%;
+                                padding: 12px;
+                                border: 0;
+                            }
+
+                            input[type="file"]{
+                                box-shadow: none;
+                            }
+
+                            &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                                color: #656a6c;
+                                text-transform: uppercase;
+                            }
+                        }
+                        div:nth-child(5){
+                            label{
+                                font-size: 0.9rem;
+                                width: 30%;
+                            }
+                        }
+                        button{
+                            position: relative;
+                            width: fit-content;
+                            margin-top: 25px;
+                            background: linear-gradient(170deg,#e8207f,#f23ebc);
+                            padding: 10px;
+                            text-align: center;
+                            text-transform: uppercase;
+                            letter-spacing: 3px;
+                            font-weight: bold;
+                            position: relative;
+                            left: 50%;
+                            top: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+                    }
+                    p{
+                        position: absolute;
+                        margin: 10px;
+                        top: 0;
+                        right: 0;
+                        width: fit-content;
+                        cursor: pointer;
+                        font-size: 1.2rem;
+                        font-weight: bold;
                     }
                 }
             }
@@ -585,4 +686,3 @@ section{
     margin-bottom: 10px;
     font-size: 1rem;
 }
-
