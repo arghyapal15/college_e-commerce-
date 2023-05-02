@@ -363,14 +363,90 @@ section{
                 justify-content: center;
                 text-align: center;
                 padding: 0.2rem 5rem;
-                // width: 7rem;
-                // height: 3rem;
                 font-size: 1.5rem;
                 border: 2px solid rgb(0, 0, 0);
                 border-radius: 15px;
                 cursor: pointer;
                 text-decoration: none;
                 letter-spacing: 0.3rem;
+            }
+            .para{
+                position: relative;
+                top: 2rem;
+                .btn{
+                    cursor:pointer;
+                    position:relative;
+                    padding:10px 20px;
+                    background:white;
+                    font-size:28px;
+                    border-top-right-radius:10px;
+                    border-bottom-left-radius:10px;
+                    transition:all 1s;
+                    &:after,&:before{
+                        content:" ";
+                        width:10px;
+                        height:10px;
+                        position:absolute;
+                        border :0px solid #fff;
+                        transition:all 1s;
+                    }
+                    &:after{
+                        top:-1px;
+                        left:-1px;
+                        border-top:5px solid rgb(214, 29, 199);
+                        border-left:5px solid rgb(214, 29, 199);
+                    }
+                    &:before{
+                        bottom:-1px;
+                        right:-1px;
+                        border-bottom:5px solid rgb(41, 220, 101);
+                        border-right:5px solid rgb(41, 220, 101);
+                    }
+                    &:hover{
+                        border-top-right-radius:0px;
+                        border-bottom-left-radius:0px;
+                        &:before,&:after{
+                        
+                        width:100%;
+                        height:100%;
+                        }
+                    }
+                }
+
+                .data-container{
+                display:flex;
+                justify-content:center;
+                }
+            }
+            .popup {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 1;
+                display: none;
+
+                .popup-form {
+                    background-color: white;
+                    padding: 20px;
+                    border-radius: 5px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    width: 50%;
+
+                    form{
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 6px;
+                    }
+                }
             }
         }
     }
@@ -461,7 +537,7 @@ section{
     max-width: 1200px;
 }
 
-.college-card {
+.card {
     flex-basis: calc(33.33% - 20px);
     background-color: #fff;
     padding: 20px;
@@ -474,13 +550,13 @@ section{
     background-color: #e2e2e2;
 }
 
-.college-logo {
+.image-container{
     width: 150px;
     height: 150px;
-    margin-right: 20px;
+    // margin-right: 20px;
 }
 
-.college-logo img {
+.image-container img {
     max-width: 100%;
     max-height: 100%;
     border-radius: 10px;
@@ -488,7 +564,7 @@ section{
     padding: 0;
 }
 
-.college-details {
+.container {
     flex: 1;
     //   display: flex;
     //   flex-direction: column;
@@ -496,29 +572,17 @@ section{
     text-align: left;
 }
 
-.college-name {
-    font-size: 24px;
+.title {
+    font-size: 14px;
     font-weight: bold;
     margin: 0;
     margin-bottom: 10px;
 }
 
 .college-location,
-.college-description {
+.rank {
     margin: 0;
     margin-bottom: 10px;
+    font-size: 1rem;
 }
 
-.college-link {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #0077ff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.college-link:hover {
-    background-color: #005
-}
