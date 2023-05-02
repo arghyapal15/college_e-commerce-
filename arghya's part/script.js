@@ -7,45 +7,165 @@ hamburger.addEventListener("click", function() {
 });
 
 
-//sort by features
-// Get the select element and product list
-const select = document.getElementById('sort-select');
-const productList = document.querySelector('.product-list');
+// college crads 
+let products = {
+    item: [
+        {
+            title: "Jadavpur University - [JU]",
+            Location: "Kolkata,West Bengal",
+            rank: "1000",
+            image: "../assets/images/c.jpeg",
+        },
+        {
+            title: "Institute of Engineering and Management - [IEM]",
+            Location: "Kolkata,West Bengal",
+            rank: "10000",
+            image: "../assets/images/c.jpeg",
+        },
+        {
+            title: "The Neotia University - [TNU]",
+            Location: "Kolkata,West Bengal",
+            rank: "15000",
+            image: "../assets/images/c.jpeg",
+        },
+        {
+            title: "Heritage Institute of Technology - [HIT]",
+            Location: "Kolkata,West Bengal",
+            rank: "5000",
+            image: "../assets/images/c.jpeg",
+        },
+        {
+            title: "RCC Institute of Information Technology - [RCCIIT]",
+            Location: "Kolkata,West Bengal",
+            rank: "2000",
+            image: "../assets/images/c.jpeg",
+        },
+        {
+            title: "Narula Institute of Technology - [NIT Agarpara]",
+            Location: "Aolkata,West Bengal",
+            rank: "8000",
+            image: "../assets/images/c.jpeg",
+        },
+        {
+            title: "Adamas University",
+            Location: "Kolkata,West Bengal",
+            rank: "30000",
+            image: "../assets/images/c.jpeg",
+        },
+        {
+            title: "Maulana Abul Kalam Azad University of Technology - [MAKAUT]",
+            Location: "Kolkata,West Bengal",
+            rank: "40000",
+            image: "../assets/images/c.jpeg",
+        },
+        {
+            title: "Bengal Institute of Technology",
+            Location: "Kolkata,West Bengal",
+            rank: "40000",
+            image: "../assets/images/c.jpeg",
+        },
+    ],
+};
 
-// Add an event listener to the select element
-select.addEventListener('change', function() {
-    // Get the selected value
-    const selectedValue = select.value;
+for (let i of products.item) {
+    // cards creation 
+    let card = document.createElement("div");
+    card.classList.add("card", i.rank);
 
-    // Sort the product list based on the selected value
-    sortProductList(selectedValue);
+    // image
+    let imgContainer = document.createElement("div");
+    imgContainer.classList.add("image-container");
+
+    let image = document.createElement("img");
+    image.setAttribute("src", i.image);
+    imgContainer.appendChild(image);
+    card.appendChild(imgContainer);
+
+    // container 
+    let container = document.createElement("div");
+    container.classList.add("container");
+    let name = document.createElement("h5");
+    name.classList.add("title");
+    name.innerText = i.title.toUpperCase();
+    container.appendChild(name);
+
+    let location = document.createElement("h4");
+    location.classList.add("Location");
+    location.innerText = "Location: " + i.Location;
+    container.appendChild(location);
+
+    let rank = document.createElement("h6");
+    rank.classList.add("rank");
+    rank.innerText = "Rank :- 0 - "+i.rank;
+    container.appendChild(rank);
+
+    card.appendChild(container);
+    document.getElementById("products").appendChild(card);
+}
+
+
+
+
+
+const sortSelect = document.getElementById('sort-select');
+const itemList = document.querySelector('.product-list');
+const items = Array.from(itemList.children);
+
+
+sortSelect.addEventListener('change', function () {
+    const selectedValue = sortSelect.value;
+    sortItems(selectedValue);
 });
 
-// Function to sort the product list
-function sortProductList(selectedValue) {
-    // Get all the product items
-    const productItems = Array.from(productList.children);
-
-    // Sort the product items based on the selected value
-    productItems.sort(function(a, b) {
-        if (selectedValue === 'name-asc') {
-            return a.dataset.name.localeCompare(b.dataset.name);
-        } else if (selectedValue === 'name-desc') {
-            return b.dataset.name.localeCompare(a.dataset.name);
-        } else if (selectedValue === 'price-asc') {
-            return parseFloat(a.dataset.price) - parseFloat(b.dataset.price);
-        } else if (selectedValue === 'price-desc') {
-            return parseFloat(b.dataset.price) - parseFloat(a.dataset.price);
-        }
-    });
-
-    // Remove all the product items from the product list
-    while (productList.firstChild) {
-        productList.removeChild(productList.firstChild);
+function sortItems(selectedValue) {
+    if (selectedValue === 'default') {
+        // Do nothing, as the items are already in their default order
+        return;
     }
 
-    // Add the sorted product items back to the product list
-    productItems.forEach(function(productItem) {
-        productList.appendChild(productItem);
+items.sort(function (a, b) {
+    let aValue, bValue;
+
+    if (selectedValue === 'atoz') {
+        aValue = a.innerText;
+        bValue = b.innerText;
+    } else if (selectedValue === 'ztoa') {
+        aValue = b.innerText;
+        bValue = a.innerText;
+    } else if (selectedValue === 'hightolow') {
+        aValue = parseFloat(b.classList[1]);
+        bValue = parseFloat(a.classList[1]);
+    } else if (selectedValue === 'lowtohigh') {
+        aValue = parseFloat(a.classList[1]);
+        bValue = parseFloat(b.classList[1]);
+    }
+
+    if (aValue < bValue) {
+        return -1;
+    }
+    if (aValue > bValue) {
+        return 1;
+    }
+    return 0;
+});
+
+    while (itemList.firstChild) {
+        itemList.removeChild(itemList.firstChild);
+    }
+
+    items.forEach(function (item) {
+        itemList.appendChild(item);
     });
 }
+
+
+
+
+//add new div button
+function openForm() {
+      document.getElementById("popup-form").style.display = "flex";
+    }
+
+    function closeForm() {
+      document.getElementById("popup-form").style.display = "none";
+    }
