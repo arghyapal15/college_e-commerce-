@@ -67,23 +67,24 @@
                         
                         <div class="popup" id="popup-form">
                             <div class="popup-form">
+                                <p onclick="closeForm()">X</p>
                                 <h2>College Registration Form</h2>
                                 <form action="#" method="post" enctype="multipart/form-data">
                                     <div>
                                         <label for="college-name">College Name:</label>
-                                        <input type="text" id="college-name" name="college-name" required>
+                                        <input type="text" id="college-name" name="college-name" placeholder="college name" required>
                                     </div>
                                     <div>
                                         <label for="email">Email:</label>
-                                        <input type="email" id="email" name="email" required>
+                                        <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
                                     </div>
                                     <div>
                                         <label for="location">Location:</label>
-                                        <input type="text" id="location" name="location" required>
+                                        <input type="text" id="location" name="location" placeholder="city" required>
                                     </div>
                                     <div>
                                         <label for="rank">Rank:</label>
-                                        <input type="number" id="rank" name="rank" min="1" required>
+                                        <input type="number" id="rank" name="rank" min="1" placeholder="xxxxxx" required>
                                     </div>
                                     <div>
                                         <label for="image">Upload College Image:</label>
@@ -91,7 +92,7 @@
                                     </div>
                                     <button type="submit">Submit</button>
                                 </form>
-                                <button onclick="closeForm()">Close</button>
+                                
                             </div>
                         </div>
                     </div>
