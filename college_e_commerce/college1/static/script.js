@@ -14,7 +14,7 @@ let products = {
             title: "Jadavpur University - [JU]",
             Location: "Kolkata,West Bengal",
             rank: "1000",
-            image: "../assets/images/c.jpeg",
+            image: "C:\ARGHYA\Django\college_e_commerce\college\static\assets\images\c.jpeg",
         },
         {
             title: "Institute of Engineering and Management - [IEM]",
