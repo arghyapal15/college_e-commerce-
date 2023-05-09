@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    {% comment %} {% load static %} {% endcomment %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>second page</title>
+    {% comment %} <link rel="stylesheet" href="{% static 'first.css' %}"> {% endcomment %}
+</head>
+<body>
+    <nav class="navbar">
+        <div class="max-width">
+
+            {% comment %} <div class="logo">
+                <a href="#home"><img class="imgg" src="./bit-logo (1).png" alt="">Lithium </a>
+            </div> {% endcomment %}
+            <ul class="menu mr-auto">
+                <li class="nav-item active"><a href="first" data-toggle="collapse" data-target=".navbar-collapse.show">Home<span class="sr-only">(current)</span></a></li>
+                <li class="nav-item"><a href="second" data-toggle="collapse" data-target=".navbar-collapse.show">About</a></li>
+                <li class="nav-item"><a href="third" data-toggle="collapse" data-target=".navbar-collapse.show">Events</a></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+                <!-- Remove Menu when net aa jaayega -->
+            </div>
+        </div>
+    </nav>
+</body>
+</html>
