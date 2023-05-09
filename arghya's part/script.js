@@ -169,3 +169,31 @@ function openForm() {
     function closeForm() {
       document.getElementById("popup-form").style.display = "none";
     }
+
+
+
+
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevent form submission
+
+  // Get form values
+  var name = document.getElementById("college-name").value;
+  var email = document.getElementById("email").value;
+        var location = document.getElementById("location").value;
+        var rank = document.getElementById("rank").value;
+        var image = document.getElementById("image").value;
+
+  // Create a new object with the form values
+  var newData = {
+    "title": name,
+      "Location": location,
+      "rank": rank,
+      "image": image
+        };
+        
+        products.item.push(newData);
+        console.log(products);
+
+  // Call a function to add the new data to the JSON file
+//   addDataToJsonFile(newData);
+});

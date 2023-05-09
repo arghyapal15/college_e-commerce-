@@ -381,8 +381,7 @@ section .nav1 {
   align-items: center;
   z-index: 1;
   display: none;
-  background: #000;
-  opacity: 0.9;
+  background: rgba(0, 0, 0, 0.8196078431);
 }
 .body .left .details .popup .popup-form {
   position: absolute;
